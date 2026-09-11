@@ -143,6 +143,11 @@ button {
   .hb-tl-arc {
     display: none !important;
   }
+  .hb-science-aside,
+  .hb-faq-aside {
+    position: static !important;
+    top: auto !important;
+  }
 }
 
 /* ---------- layout shells ---------- */

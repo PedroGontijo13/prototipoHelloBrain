@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@700;800&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+ * Preflight is disabled (tailwind.config.ts) so prototype 1 (app/page.tsx + home.css)
+ * never inherits Tailwind's reset. Everything below is scoped under .pg-root instead
+ * of `body`, mirroring mydesignsystem/src/styles/globals.css's @layer base block.
+ */
+.pg-root {
+  background: #fffdf5;
+  color: #1e293b;
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.pg-root * {
+  box-sizing: border-box;
+}
+
+.pg-root h1,
+.pg-root h2,
+.pg-root h3,
+.pg-root h4 {
+  font-family: "Outfit", system-ui, sans-serif;
+  font-weight: 800;
+  margin: 0;
+}
+
+.pg-root p,
+.pg-root ul,
+.pg-root ol,
+.pg-root figure {
+  margin: 0;
+}
+
+.pg-root ul,
+.pg-root ol {
+  padding: 0;
+  list-style: none;
+}
+
+.pg-root button {
+  font: inherit;
+  cursor: pointer;
+}
+
+.pg-root img {
+  display: block;
+  max-width: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pg-root *,
+  .pg-root *::before,
+  .pg-root *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
